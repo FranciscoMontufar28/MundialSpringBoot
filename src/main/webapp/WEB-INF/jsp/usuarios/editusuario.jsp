@@ -40,7 +40,7 @@
                         </p>
                         <p>
                             <form:label path="password">Clave</form:label>
-                            <form:input path="password" cssClass="form-control"/>                        
+                            <form:input type="password" path="password" cssClass="form-control"/>                        
                         </p>
                         <p>
                             <form:label path="type">Tipo de Usuario (Admin/Normal | 1/0)</form:label>

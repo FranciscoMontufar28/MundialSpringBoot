@@ -24,7 +24,7 @@
                         
                         <p>
                             <form:label path="password">Clave</form:label>
-                            <form:input path="password" cssClass="form-control"/>                        
+                            <form:input type="password" path="password" cssClass="form-control"/>                        
                         </p>
                         
                         <hr/>

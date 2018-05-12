@@ -4,6 +4,8 @@ package com.francisco.mundial.controller;
 import com.francisco.mundial.models.Conection;
 import com.francisco.mundial.models.Usuarios;
 import java.util.List;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -47,7 +49,7 @@ public class LoginController {
         if(!datos.isEmpty()){
         mav.addObject("datos", datos);
         mav.setViewName("login");
-        return new ModelAndView("redirect:/index.htm");
+        return new ModelAndView("redirect:/menu/menu.htm");
         }else{
             mav = new ModelAndView();
             mav.setViewName("login");
