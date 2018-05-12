@@ -30,8 +30,8 @@
                                 <td><c:out value="${datop.lastname}"/></td>
                                 <td><c:out value="${datop.club}"/></td>
                                 <td>
-                                    <a href="<c:url value="editjugador.htm?id=${datop.idjugadores}"/>"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>Editar</a>
-                                    <a href="<c:url value="deletejugador.htm?id=${datop.idjugadores}"/>"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span>Eliminar</a>
+                                    <a href="<c:url value="/jugadores/editjugador.htm?id=${datop.idjugadores}"/>"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>Editar</a>
+                                    <a href="<c:url value="/jugadores/deletejugadores.htm?id=${datop.idjugadores}"/>"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span>Eliminar</a>
                                 </td>
                             </tr>
                         </c:forEach>
