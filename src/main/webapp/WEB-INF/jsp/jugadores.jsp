@@ -12,17 +12,14 @@
             <div class="row">
                 <h1>Eventos</h1>
                 <p>
-                    <a href="<c:url value="addusuario.htm"/>" class="btn btn-success"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Agregar</a>
+                    <a href="<c:url value="addjugador.htm"/>" class="btn btn-success"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Agregar</a>
                 </p>
                 <table class="table table-bordered table-striped table-hover" >
                     <thead>
                         <tr>
                             <th>Nombres</th>
                             <th>Apellidos</th>
-                            <th>Identificacion</th>
-                            <th>Clave</th>
-                            <th>Tipo de Usuario</th>
-                            <th>Fecha Registro</th>
+                            <th>Club</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
@@ -31,13 +28,10 @@
                             <tr>
                                 <td><c:out value="${dato.name}"/></td>
                                 <td><c:out value="${dato.lastname}"/></td>
-                                <td><c:out value="${dato.identification}"/></td>
-                                <td><c:out value="${dato.password}"/></td>
-                                <td><c:out value="${dato.type}"/></td>
-                                <td><c:out value="${dato.date}"/></td>
+                                <td><c:out value="${dato.club}"/></td>
                                 <td>
-                                    <a href="<c:url value="editusuario.htm?id=${dato.idusuarios}"/>"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>Editar</a>
-                                    <a href="<c:url value="deleteusuario.htm?id=${dato.idusuarios}"/>"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span>Eliminar</a>
+                                    <a href="<c:url value="editjugador.htm?id=${dato.idusuarios}"/>"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>Editar</a>
+                                    <a href="<c:url value="deletejugador.htm?id=${dato.idusuarios}"/>"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span>Eliminar</a>
                                 </td>
                             </tr>
                         </c:forEach>

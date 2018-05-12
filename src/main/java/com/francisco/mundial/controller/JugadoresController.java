@@ -9,25 +9,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class UsuariosController {
+public class JugadoresController {
     
+        
     private JdbcTemplate jdbtemplate;
     
-    public UsuariosController(){
+    public JugadoresController(){
         Conection con = new Conection();
         this.jdbtemplate = new JdbcTemplate(con.conectar());
     }
     
-    @RequestMapping("usuarios.htm")
-    public ModelAndView User(){
+    @RequestMapping("jugadores.htm")
+    public ModelAndView player(){
         ModelAndView mav = new ModelAndView();
-        String usuariosmundial = "SELECT * FROM usuarios";
-        List datos = this.jdbtemplate.queryForList(usuariosmundial);
+        String jugadoresmundial = "SELECT * FROM jugadores";
+        List datos = this.jdbtemplate.queryForList(jugadoresmundial);
         mav.addObject("datos", datos);
-        mav.setViewName("usuarios");
+        mav.setViewName("jugadores");
         return mav;
     }
-    
-    
-    
 }
