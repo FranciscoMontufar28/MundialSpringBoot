@@ -10,9 +10,9 @@
     <body>
         <div class="container">
             <div class="row">
-                <h1>Eventos</h1>
+                <h1>Jugadores</h1>
                 <p>
-                    <a href="<c:url value="addjugador.htm"/>" class="btn btn-success"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Agregar</a>
+                    <a href="<c:url value="/jugadores/addjugador.htm"/>" class="btn btn-success"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Agregar</a>
                 </p>
                 <table class="table table-bordered table-striped table-hover" >
                     <thead>
@@ -24,14 +24,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <c:forEach items="${datos}" var="dato">
+                        <c:forEach items="${datosp}" var="datop">
                             <tr>
-                                <td><c:out value="${dato.name}"/></td>
-                                <td><c:out value="${dato.lastname}"/></td>
-                                <td><c:out value="${dato.club}"/></td>
+                                <td><c:out value="${datop.name}"/></td>
+                                <td><c:out value="${datop.lastname}"/></td>
+                                <td><c:out value="${datop.club}"/></td>
                                 <td>
-                                    <a href="<c:url value="editjugador.htm?id=${dato.idusuarios}"/>"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>Editar</a>
-                                    <a href="<c:url value="deletejugador.htm?id=${dato.idusuarios}"/>"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span>Eliminar</a>
+                                    <a href="<c:url value="editjugador.htm?id=${datop.idjugadores}"/>"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>Editar</a>
+                                    <a href="<c:url value="deletejugador.htm?id=${datop.idjugadores}"/>"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span>Eliminar</a>
                                 </td>
                             </tr>
                         </c:forEach>

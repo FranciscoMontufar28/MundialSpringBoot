@@ -11,7 +11,7 @@
     <body>
         <div class="container">
             <ol class="breadcrumb">
-                <li><a href="<c:url value="/usuarios.htm"/>">Eventos</a></li>
+                <li><a href="<c:url value="/jugadores/jugadores.htm"/>">Jugadores</a></li>
                 <li class="active">Editar</li>
             </ol>
 
@@ -19,11 +19,9 @@
                 <div class="panel-heading">Formulario</div>
                 <div class="panel-body">
                     
-                    <form:form method="post" modelAttribute="usuarios">
-                        <h1>Editar Usuarios</h1>
+                    <form:form method="post" modelAttribute="jugadores">
+                        <h1>Editar Jugador</h1>
                         
-                        <form:errors path="*" element="div" cssClass="alert alert-danger"/>
-                      
                         <p>
                             <form:label path="name">Nombres</form:label>
                             <form:input path="name" cssClass="form-control"/>                        
@@ -35,16 +33,8 @@
                         </p>
                         
                         <p>
-                            <form:label path="identification">Cedula</form:label>
-                            <form:input path="identification" cssClass="form-control"/>                        
-                        </p>
-                        <p>
-                            <form:label path="password">Clave</form:label>
-                            <form:input path="password" cssClass="form-control"/>                        
-                        </p>
-                        <p>
-                            <form:label path="type">Tipo de Usuario (Admin/Normal | 1/0)</form:label>
-                            <form:input path="type" cssClass="form-control"/>                        
+                            <form:label path="club">Club</form:label>
+                            <form:input path="club" cssClass="form-control"/>                        
                         </p>
                         <hr/>
                         <input type="submit" value="Enviar" class="btn btn-danger"/>
