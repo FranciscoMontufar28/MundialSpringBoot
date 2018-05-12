@@ -18,7 +18,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 @Controller
-@RequestMapping("editusuario.htm")
+@RequestMapping("/usuarios/editusuario.htm")
 public class EditUsuarioController {
 
     private JdbcTemplate jdbctemplate;
@@ -33,7 +33,7 @@ public class EditUsuarioController {
         ModelAndView mav = new ModelAndView();
         int id = Integer.parseInt(request.getParameter("id"));
         Usuarios datos = this.UsuarioSelected(id);
-        mav.setViewName("editusuario");
+        mav.setViewName("/usuarios/editusuario");
         mav.addObject("usuarios", new Usuarios(id, datos.getName(), datos.getLastname(), datos.getIdentification(), datos.getPassword(), datos.getType(), datos.getDate()));
         return mav;
     }
@@ -68,7 +68,7 @@ public class EditUsuarioController {
         this.jdbctemplate.update(
                 "update usuarios set name=?, lastname=?, identification=?, password=?, type=?  where idusuarios=?",
                 u.getName(), u.getLastname(), u.getIdentification(), u.getPassword(), u.getType(), id);
-        return new ModelAndView("redirect:/usuarios.htm");
+        return new ModelAndView("redirect:/usuarios/usuarios.htm");
 
     }
 }

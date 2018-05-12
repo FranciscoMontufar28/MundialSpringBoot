@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("menu.htm")
+@RequestMapping("/menu/menu.htm")
 public class MenuController {
     
     @RequestMapping(method = RequestMethod.GET)
     public ModelAndView form() {
         ModelAndView mav = new ModelAndView();
-        mav.setViewName("menu");
+        mav.setViewName("/menu/menu");
         return mav;
     }
     

@@ -11,6 +11,10 @@
         <div class="container">
             <div class="row">
                 <h1>Jugadores</h1>
+                <ol class="breadcrumb">
+                    <li><a href="<c:url value="/menu/menu.htm"/>">Menu</a></li>
+                    <li class="active">Jugadores</li>
+                </ol>
                 <p>
                     <a href="<c:url value="/jugadores/addjugador.htm"/>" class="btn btn-success"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Agregar</a>
                 </p>

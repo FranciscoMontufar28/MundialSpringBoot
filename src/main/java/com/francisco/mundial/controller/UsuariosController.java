@@ -18,13 +18,13 @@ public class UsuariosController {
         this.jdbtemplate = new JdbcTemplate(con.conectar());
     }
     
-    @RequestMapping("usuarios.htm")
+    @RequestMapping("/usuarios/usuarios.htm")
     public ModelAndView User(){
         ModelAndView mav = new ModelAndView();
         String usuariosmundial = "SELECT * FROM usuarios";
         List datos = this.jdbtemplate.queryForList(usuariosmundial);
         mav.addObject("datos", datos);
-        mav.setViewName("usuarios");
+        mav.setViewName("/usuarios/usuarios");
         return mav;
     }
     

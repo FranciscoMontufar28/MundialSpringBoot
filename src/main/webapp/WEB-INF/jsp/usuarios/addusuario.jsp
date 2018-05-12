@@ -5,14 +5,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Agregar Usuarios</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     </head>
     <body>
         <div class="container">
             <ol class="breadcrumb">
-                <li><a href="<c:url value="/usuarios.htm"/>">Eventos</a></li>
-                <li class="active">Editar</li>
+                <li><a href="<c:url value="/usuarios/usuarios.htm"/>">Usuarios</a></li>
+                <li class="active">Agregar Usuario</li>
             </ol>
 
             <div class="panel panel-primary">
@@ -20,10 +20,7 @@
                 <div class="panel-body">
                     
                     <form:form method="post" modelAttribute="usuarios">
-                        <h1>Editar Usuarios</h1>
-                        
-                        <form:errors path="*" element="div" cssClass="alert alert-danger"/>
-                      
+                        <h1>Agregar un Usuario</h1>                       
                         <p>
                             <form:label path="name">Nombres</form:label>
                             <form:input path="name" cssClass="form-control"/>                        
@@ -43,7 +40,7 @@
                             <form:input path="password" cssClass="form-control"/>                        
                         </p>
                         <p>
-                            <form:label path="type">Tipo de Usuario (Admin/Normal | 1/0)</form:label>
+                            <form:label path="type">Tipo de Usuario (Admin/Nomal  "1/0")</form:label>
                             <form:input path="type" cssClass="form-control"/>                        
                         </p>
                         <hr/>

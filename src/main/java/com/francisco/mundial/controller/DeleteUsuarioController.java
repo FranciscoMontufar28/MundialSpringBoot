@@ -16,11 +16,11 @@ public class DeleteUsuarioController {
         this.jdbctemplate =new JdbcTemplate(con.conectar());
     }
     
-    @RequestMapping("deleteusuario.htm")
+    @RequestMapping("/usuarios/deleteusuario.htm")
     public ModelAndView delete(HttpServletRequest request){
         int id=Integer.parseInt(request.getParameter("id"));
         this.jdbctemplate.update("Delete from usuarios where idusuarios=?", id);
-        return new ModelAndView("/redirect:/usuarios.htm");
+        return new ModelAndView("/redirect:/usuarios/usuarios.htm");
     }
     
 }

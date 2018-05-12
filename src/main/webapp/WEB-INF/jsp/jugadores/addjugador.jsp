@@ -11,7 +11,7 @@
     <body>
         <div class="container">
             <ol class="breadcrumb">
-                <li><a href="<c:url value="/event.htm"/>">Eventos</a></li>
+                <li><a href="<c:url value="/jugadores/jugadores.htm"/>">Jugadores</a></li>
                 <li class="active">Agregar</li>
             </ol>
 

@@ -16,7 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 @Controller
-@RestController("addusuario.htm")
+@RestController("/usuarios/addusuario.htm")
 public class AddUsuarioController {
     
     private JdbcTemplate jdbctemplate;
@@ -29,7 +29,7 @@ public class AddUsuarioController {
     @RequestMapping(method = RequestMethod.GET)
     public ModelAndView form() {
         ModelAndView mav = new ModelAndView();
-        mav.setViewName("addusuario");
+        mav.setViewName("/usuarios/addusuario");
         mav.addObject("usuarios", new Usuarios());
         return mav;
     }
